@@ -14,7 +14,6 @@ int largest(const std::vector<int>&a){
 int result_two(const std::vector<int>& a, const std::vector<int>& b){
 	std::vector<int>::size_type vec_size = a.size();
 	std::unordered_map<int, int> mp;
-	std::unordered_map<int, int> bp;
 	int sum_of_diffs = 0;
 
 	for (int i = 0; i < vec_size; i++) {
