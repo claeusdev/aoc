@@ -18,21 +18,11 @@ int result_two(const std::vector<int>& a, const std::vector<int>& b){
 	int sum_of_diffs = 0;
 
 	for (int i = 0; i < vec_size; i++) {
-		/*mp[a[i]] = mp[b[i]];*/
 		mp[b[i]]++;
-		/*mp[b[i]]++;*/
-		/*if(a[i] == b[i]) {*/
-		/*	mp[a[i]]++;*/
-		/*}*/
-
 	}
 
 	for (int i = 0; i < vec_size; i++) {
 		sum_of_diffs += a[i] * mp[a[i]];
-	}
-
-	for (const auto& pair: mp) {
-		std::cout << pair.first  << "-"<< pair.second <<std::endl;
 	}
 
 	return sum_of_diffs;
@@ -46,8 +36,6 @@ int result_one(const std::vector<int>& a, const std::vector<int>& b){
 		sum_of_diffs += abs(a[i] - b[i]);
 	}
 
-
-	std::cout << "sum of diffs" << sum_of_diffs << std::endl;
 	return sum_of_diffs;
 }
 
